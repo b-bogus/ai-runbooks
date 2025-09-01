@@ -8,36 +8,13 @@ This is a security operations (SOC) runbook and persona system designed to guide
 
 ## Repository Structure
 
-- `rules_bank/` - Master source directory containing all documentation, personas, and runbooks
+- `rules_bank/` - Master directory containing all documentation, personas, and runbooks
   - `personas/` - Security role definitions (SOC Analysts, Threat Hunters, Incident Responders, etc.)
   - `run_books/` - Step-by-step procedural guides for security tasks
     - `common_steps/` - Reusable procedure components
     - `irps/` - Incident Response Plans for major incidents
     - `guidelines/` - Best practices and documentation guides
-- `.claude/` - Claude Code configuration directory
-  - `rules_bank/` - Symlink to ../rules_bank (provides access to all content)
-- `.clinerules/` - Cline configuration directory
-  - `rules_bank/` - Symlink to ../rules_bank (provides access to all content)
-- `.gemini/` - Gemini CLI configuration directory
-  - `rules_bank/` - Symlink to ../rules_bank (provides access to all content)
 - `reports/` - Generated security reports and examples
-
-## Multi-LLM Architecture
-
-This repository is designed for seamless integration across multiple AI assistants through a unified content structure:
-
-### Supported AI Tools
-- **Claude Code**: Accesses content through `.claude/rules_bank/` symlinks
-- **Cline**: Utilizes `.clinerules/rules_bank/` directory structure  
-- **Gemini CLI**: Reads from `.gemini/rules_bank/` configuration
-- **Other LLMs**: Can directly access `rules_bank/` master content
-
-### Unified Content Access
-All AI tools access identical content through symlinks to the master `rules_bank/` directory. This architecture:
-- Ensures consistency across different AI platforms
-- Eliminates content duplication and maintenance overhead
-- Provides standardized security workflows regardless of the AI assistant used
-- Maintains specialized tool configurations while sharing core knowledge
 
 ## Configuration Scripts
 
@@ -71,10 +48,9 @@ Run this after changing personas to ensure common steps remain accessible.
 
 ## Working with the Codebase
 
-1. The primary content lives in `rules_bank/` - edit source files there, not in the symlinked directories
-2. The symlinks in `.claude/`, `.clinerules/`, and `.gemini/` automatically reflect changes made to `rules_bank/`
-3. The project uses MCP (Model Context Protocol) tools for integration with Google Cloud security services
-4. Runbook actions map to specific agent tools (see `rules_bank/agent_tool_mapping.md`)
+1. All content lives in `rules_bank/` - this is the primary working directory
+2. The project uses MCP (Model Context Protocol) tools for integration with Google Cloud security services
+3. Runbook actions map to specific agent tools (see `rules_bank/agent_tool_mapping.md`)
 
 ## Essential Context Sources for LLMs
 
@@ -159,9 +135,8 @@ Content organization and analysis capabilities:
 
 ### Repository Guidelines
 - This is primarily a documentation repository - no build, test, or lint commands exist
-- **Always edit source files in `rules_bank/`** - not through symlinked directories
-- Changes to `rules_bank/` automatically propagate to all AI tool configurations
-- The symlink system ensures unified access across different AI platforms
+- All content is stored directly in `rules_bank/` for simple, direct access
+- Designed for AI-assisted security operations and incident response workflows
 
 ### Security Operations Focus
 - Specialized for defensive security operations and incident response

@@ -1,6 +1,6 @@
 # Suspicious Login Triage Report - Case 2194
 
-**Runbook Used:** `.clinerules/run_books/suspicious_login_triage.md`
+**Runbook Used:** `rules_bank/run_books/suspicious_login_triage.md`
 **Timestamp:** 2025-05-04 11:28 AM EDT (Approx)
 **Case ID(s):** 2194
 

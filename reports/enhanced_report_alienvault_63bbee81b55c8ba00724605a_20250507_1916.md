@@ -1,6 +1,6 @@
 # Investigation Summary: GTI Collection alienvault_63bbee81b55c8ba00724605a
 
- * **Runbook Used:** `.clinerules/run_books/investigate_a_gti_collection_id.md`
+ * **Runbook Used:** `rules_bank/run_books/investigate_a_gti_collection_id.md`
  * **Timestamp:** 2025-05-07 19:16 (UTC-4)
  * **Collection ID:** `alienvault_63bbee81b55c8ba00724605a`
  * **Collection Name:** Unwrapping Ursnifs Gifts

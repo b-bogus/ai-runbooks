@@ -1,6 +1,6 @@
 # Lateral Movement Hunt Report: PsExec/WMI for serhatg.local
 
-**Runbook Used:** `.clinerules/run_books/lateral_movement_hunt_psexec_wmi.md`
+**Runbook Used:** `rules_bank/run_books/lateral_movement_hunt_psexec_wmi.md`
 **Timestamp:** 2025-05-04 00:32 AM UTC-4
 **Target Host:** `serhatg.local`
 **Timeframe:** Last 72 hours (approx. 2025-05-01 00:32 to 2025-05-04 00:32 UTC-4)

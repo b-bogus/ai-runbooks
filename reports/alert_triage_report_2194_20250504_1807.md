@@ -1,6 +1,6 @@
 # Alert Triage Report: Case 2194
 
-**Runbook Used:** `.clinerules/run_books/triage_alerts.md`
+**Runbook Used:** `rules_bank/run_books/triage_alerts.md`
 **Timestamp:** 2025-05-04 18:07 UTC-4
 **Case ID(s):** 2194
 

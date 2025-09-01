@@ -1,6 +1,6 @@
 # Advanced Threat Hunt Report: SUPERSTARTS.TOP
 
-**Runbook Used:** `.clinerules/run_books/advanced_threat_hunting.md`
+**Runbook Used:** `rules_bank/run_books/advanced_threat_hunting.md`
 **Timestamp:** 2025-05-03 14:21 (America/New_York)
 **Hypothesis:** Malicious domain SUPERSTARTS.TOP is being used to deliver malware.
 

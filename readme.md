@@ -4,7 +4,7 @@ This repository provides security operations runbooks and role-based guides for 
 
 ## Overview
 
-Built by and for enterprise security teams, this project standardizes incident  response procedures and threat analysis workflows across multiple AI platforms including Claude, Gemini, and Cline. It equips LLMs with specialized context and cognitive tools to perform complex security investigations with the same rigor and consistency as experienced analysts.
+Built by and for enterprise security teams, this project standardizes incident response procedures and threat analysis workflows for AI-assisted cybersecurity. It equips LLMs with specialized context and cognitive tools to perform complex security investigations with the same rigor and consistency as experienced analysts.
 
 ## Key Components
 
@@ -37,7 +37,7 @@ Comprehensive end-to-end strategies for:
 
 ```
 ai_runbooks/
-├── rules_bank/                    # Master source directory for all content
+├── rules_bank/                    # All content - personas, runbooks, documentation
 │   ├── personas/                  # Security role definitions
 │   ├── run_books/                 # Procedural guides for security tasks
 │   │   ├── common_steps/         # Reusable procedure components
@@ -53,12 +53,9 @@ ai_runbooks/
 
 1. **For Security Teams**: Use this repository to standardize and document your security operations procedures for AI-assisted workflows.
 
-2. **For Developers**:
-   - Edit content only in the `rules_bank/` directory
-   - Never edit files through the symlinks in AI tool directories
-   - Use the provided Python scripts for configuration if needed
+2. **For Developers**: All content is stored in the `rules_bank/` directory for direct access and editing.
 
-3. **For AI Assistants**: The symlinked `rules_bank` directory in each tool's configuration folder provides access to all personas, runbooks, and documentation.
+3. **For AI Assistants**: The `rules_bank` directory contains all personas, runbooks, and documentation needed for security operations.
 
 ## Integration
 
@@ -79,81 +76,19 @@ This project is licensed under the Apache License 2.0 - see the `LICENSE` file f
 
 ---
 
-## AI Tool Integration
-
-This repository is designed to work with three AI coding assistants:
-
-### Claude Code (claude.ai/code)
-- Uses the `.claude/` directory for configuration
-- Reads context from `.claude/rules_bank/` symlink
-- See `CLAUDE.md` for Claude-specific guidance
-
-### Cline
-- Uses the `.clinerules/` directory for configuration
-- Reads context from `.clinerules/rules_bank/` symlink
-- Follows the same runbook and persona system
-
-### Gemini CLI
-- Uses the `.gemini/` directory for configuration
-- Reads context from `.gemini/rules_bank/` symlink
-- See `GEMINI.md` for Gemini-specific guidance
-- Compatible with the same documentation structure
-
-### Quick Start for AI Tools
+## Quick Start
 
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd dandye_ai_runbooks
+   cd ai-runbooks
    ```
 
-2. The symlinks should already be set up. Verify they exist:
-   ```bash
-   ls -la .claude/rules_bank
-   ls -la .clinerules/rules_bank
-   ls -la .gemini/rules_bank
-   ```
+2. All content is available in the `rules_bank/` directory for immediate use by AI assistants.
 
-3. If symlinks are missing, create them manually:
-   ```bash
-   # For Claude Code
-   mkdir -p .claude
-   ln -s ../rules_bank .claude/rules_bank
+### Configuration
 
-   # For Cline
-   mkdir -p .clinerules
-   ln -s ../rules_bank .clinerules/rules_bank
-
-   # For Gemini CLI
-   mkdir -p .gemini
-   ln -s ../rules_bank .gemini/rules_bank
-   ```
-
-### Using with AI Tools
-
-Each AI tool will automatically read the context from its respective directory:
-- **Claude Code**: Reads from `.claude/`
-- **Cline**: Reads from `.clinerules/`
-- **Gemini CLI**: Reads from `.gemini/`
-
-All three tools access the same content through symlinks, ensuring consistency.
-
-### Symlink Architecture
-
-The project uses a symlink-based system to share the same content across all three AI tools:
-
-1. **Master Content**: All documentation, personas, and runbooks are maintained in `rules_bank/`
-2. **Symlinks**: Each AI tool's configuration directory contains a symlink to `rules_bank/`
-3. **Benefits**:
-   - Single source of truth for all content
-   - Updates automatically propagate to all AI tools
-   - No duplication or synchronization needed
-
-### Configuration Scripts
-
-- `set_persona_rules.py`: Configure active personas (legacy - may need updates for new structure)
-- `symlink_common_steps.py`: Manage common steps symlinks (legacy - may need updates)
-- `configure_mcp_tools.py`: Configure MCP (Model Context Protocol) tools for Claude Desktop
+- `configure-mcp.sh`: Configure MCP (Model Context Protocol) tools for enhanced security platform integration
 
 ## Example Runbook Invocation Prompts
 
