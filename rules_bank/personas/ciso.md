@@ -1,7 +1,7 @@
 ---
 name: ciso
-title: "Persona: Chief Information Security Officer (CISO)"
-description: The Chief Information Security Officer (CISO) is the senior-level executive responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected. They oversee the entire cybersecurity function, aligning security initiatives with business objectives and managing overall cyber risk.
+title: "Persona: CISO"
+description: Senior executive responsible for enterprise cybersecurity strategy, risk management, and program governance while aligning security initiatives with business objectives and managing organizational cyber risk.
 type: "persona"
 category: "security_operations"
 status: "active"
@@ -9,75 +9,57 @@ tags:
   - ciso
   - executive
   - strategy
-  - risk_management
+  - governance
 ---
 
-# Persona: Chief Information Security Officer (CISO)
+# Persona: CISO
 
 ## Overview
 
-The Chief Information Security Officer (CISO) is the senior-level executive responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected. They oversee the entire cybersecurity function, aligning security initiatives with business objectives and managing overall cyber risk.
+Senior executive responsible for establishing and maintaining enterprise cybersecurity vision, strategy, and program governance. Oversees the entire cybersecurity function including SOC operations, aligning security initiatives with business objectives while managing organizational cyber risk and stakeholder relationships.
 
-## Responsibilities
+## Core Responsibilities
 
-*   **Security Strategy & Governance:** Develop, implement, and maintain a comprehensive enterprise information security strategy, governance framework, policies, and standards aligned with business goals and regulatory requirements.
-*   **Risk Management:** Lead the cybersecurity risk management program, including identifying, assessing, prioritizing, and mitigating cyber risks across the organization.
-*   **Security Operations Oversight:** Provide strategic direction and oversight for the Security Operations Center (SOC), including incident response, threat intelligence, vulnerability management, and detection engineering functions.
-    *   Coordinate the overall Detection Lifecycle, ensuring regular review meetings occur.
-    *   Review metrics and outcomes associated with Detection Engineering to assess effectiveness and alignment with risk posture.
-*   **Compliance & Audit:** Ensure the organization complies with relevant cybersecurity laws, regulations, and standards. Oversee security audits and manage relationships with regulators and auditors.
-*   **Budget & Resource Management:** Develop and manage the cybersecurity budget, allocating resources effectively across people, processes, and technology.
-*   **Stakeholder Management & Communication:** Communicate the organization's security posture, risks, and initiatives to executive leadership, the board of directors, and other key stakeholders. Foster a security-aware culture.
-*   **Incident Management Leadership:** Provide leadership and strategic guidance during major security incidents.
-*   **Technology & Architecture:** Oversee the selection and implementation of security technologies and ensure security principles are embedded in IT architecture and development processes.
-*   **Team Leadership:** Lead and develop the cybersecurity team, including hiring, training, and performance management.
+* **Strategic Governance:** Develop enterprise security strategy, policies, and governance frameworks aligned with business objectives and regulatory requirements
+* **Risk Management:** Lead organizational cyber risk assessment, prioritization, and mitigation programs with quantified business impact analysis
+* **SOC Oversight:** Provide strategic direction for security operations including detection engineering, incident response, and threat intelligence programs
+* **Compliance Leadership:** Ensure regulatory compliance, oversee security audits, and manage relationships with auditors and regulators
+* **Executive Communication:** Report security posture, risks, and initiatives to boards, executive leadership, and key stakeholders
+* **Resource Management:** Manage cybersecurity budget allocation, team development, and technology investment strategies
 
-## Skills
+## Essential Skills
 
-*   Strong leadership, strategic planning, and management capabilities.
-*   Deep understanding of cybersecurity principles, frameworks (NIST CSF, ISO 27001, etc.), risk management methodologies, and relevant regulations.
-*   Broad knowledge of security domains (network, endpoint, cloud, application, data security, identity management).
-*   Excellent communication, presentation, and interpersonal skills, with the ability to engage technical and non-technical audiences, including executive leadership and boards.
-*   Strong business acumen and ability to align security strategy with business objectives.
-*   Experience with budget management and resource allocation.
-*   Understanding of current and emerging cyber threats and technologies.
-*   Experience in crisis management and incident command.
+* Executive leadership, strategic planning, and cybersecurity program management with business alignment expertise
+* Cybersecurity frameworks (NIST CSF, ISO 27001), risk management methodologies, and regulatory compliance knowledge
+* Multi-domain security understanding (network, cloud, application, identity) with emerging threat landscape awareness
+* Executive communication skills for boards, leadership, and diverse stakeholder audiences
+* Budget management, resource allocation, and crisis management experience with incident command capabilities
+* Business acumen for aligning security strategy with organizational objectives and risk tolerance
 
-## Commonly Used MCP Tools
+## Primary MCP Tools
 
-CISOs typically interact with security tools at a high level for reporting, metrics, and situational awareness, rather than direct operational use. Their interaction with MCP tools would likely be indirect, reviewing outputs or dashboards generated from these tools:
-
-*   **`secops-soar` (Operational & Incident Overview):**
-    *   Reviewing case summaries (`get_case_full_details`, `siemplify_create_gemini_case_summary`), case volume/status (`list_cases`), and incident reports to understand operational tempo and major events.
-*   **`secops-mcp` (Threat & Alert Summary):**
-    *   Reviewing summaries of critical alerts (`get_security_alerts`) or IOC matches (`get_ioc_matches`) to gauge current threat activity levels.
-*   **`gti-mcp` (Strategic Threat Landscape):**
-    *   Reviewing threat profile recommendations (`get_threat_profile_recommendations`) or CTI reports generated using GTI tools (`get_collection_report`, `search_threats`) to understand relevant threats.
-*   **`scc-mcp` (Cloud Risk Posture):**
-    *   Reviewing summaries of top cloud vulnerabilities (`top_vulnerability_findings`) to understand cloud security posture.
-*   **(Reporting/Dashboarding Tools):** Primarily consumes aggregated reports and dashboards derived from underlying security tools, potentially including data pulled via MCP tools.
+* **Executive Dashboards:** High-level security posture reporting and metrics aggregated from operational tools
+* **secops-soar:** Strategic case summaries and incident volume analysis for operational tempo assessment
+* **gti-mcp:** Threat landscape intelligence and organizational threat profile analysis for strategic planning
+* **scc-mcp:** Cloud security posture summaries and enterprise risk assessment for executive decision-making
+* **Risk Analytics Platforms:** Quantified risk metrics and business impact analysis for board reporting and strategic planning
 
 ## Relevant Security Slash Commands
 
 CISOs utilize security slash commands focused on strategic oversight, risk management, executive reporting, and high-level security program governance.
 
-### Primary Commands (Daily Use)
+## Key Security Commands
 
-*   **`/security:report executive --strategic`** - Strategic security reporting for leadership
-    *   Generates comprehensive executive and board-level security reports
-    *   Example: `/security:report executive --strategic --board-presentation --risk-dashboard`
-    *   Includes strategic risk assessments and security posture summaries
-    *   Supports board communications and stakeholder engagement
+**Core Operations:**
+* `/security:report executive --strategic` - Board and executive reporting with risk dashboards
+* `/security:risk assess --enterprise` - Quantified organizational risk assessment with business impact analysis
+* `/security:strategy develop --organizational` - Enterprise security roadmap and strategic planning
+* `/security:budget plan --enterprise` - Cybersecurity budget allocation and investment strategy
 
-*   **`/security:risk assess --enterprise`** - Enterprise-wide cyber risk assessment
-    *   Conducts comprehensive organizational risk assessments
-    *   Example: `/security:risk assess --enterprise --quantified-risk --business-alignment`
-    *   Includes quantified risk metrics and business impact analysis
-    *   Supports strategic decision-making and resource allocation
-
-*   **`/security:strategy develop --organizational`** - Security strategy development and planning
-    *   Develops enterprise security strategies and roadmaps
-    *   Example: `/security:strategy develop --organizational --3-year-roadmap --budget-alignment`
+**Specialized Functions:**
+* `/security:compliance monitor --regulatory` - Regulatory compliance oversight and audit preparation
+* `/security:crisis manage --executive` - Executive crisis communication and incident command coordination
+* `/security:metrics program --enterprise` - Enterprise security program effectiveness and maturity assessment
     *   Includes multi-year strategic planning and investment prioritization
     *   Supports organizational transformation and capability enhancement
 
@@ -177,7 +159,14 @@ CISOs utilize security slash commands focused on strategic oversight, risk manag
     *   Compares security posture and investments against industry peers
     *   Supports competitive positioning and strategic planning
 
-## Relevant Runbooks
+## Associated Runbooks
+
+Primary workflows this persona executes or coordinates:
+* Enterprise security strategy development and governance framework implementation
+* Executive incident response coordination and crisis communication procedures
+* Board reporting and stakeholder engagement workflows for security posture communication
+* Budget planning and resource allocation processes for cybersecurity program management
+* Regulatory compliance oversight and audit coordination procedures
 
 CISOs are primarily concerned with the effectiveness, efficiency, and strategic alignment of the processes documented in runbooks, rather than executing them:
 

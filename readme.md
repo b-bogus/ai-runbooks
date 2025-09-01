@@ -35,10 +35,11 @@ Comprehensive end-to-end strategies for:
 
 ## Repository Structure
 
+### Quick Overview
 ```
 ai_runbooks/
 ├── rules_bank/                    # All content - personas, runbooks, documentation
-│   ├── personas/                  # Security role definitions
+│   ├── personas/                  # Security role definitions  
 │   ├── run_books/                 # Procedural guides for security tasks
 │   │   ├── common_steps/         # Reusable procedure components
 │   │   ├── irps/                 # Incident Response Plans
@@ -48,6 +49,89 @@ ai_runbooks/
 ├── mcp-security/                 # MCP server implementations
 └── [configuration files]         # Various setup and config scripts
 ```
+
+### Complete Directory Structure & File Analysis
+
+#### 🎯 **Core SOC Automation Content** *(Most Important)*
+
+**`rules_bank/` (54 files)** - The heart of SOC automation
+- **Personas** (11 files): AI role definitions for different SOC positions
+  - `soc_analyst_unified.md` - Unified Tier 1-3 SOC analyst framework
+  - `threat_hunter.md` - Proactive threat hunting specialist
+  - `incident_responder.md` - Incident response coordination
+  - `detection_engineer.md` - Detection rule development
+  - `cti_researcher.md` - Cyber threat intelligence analysis
+  - Plus executive roles (CISO, compliance, security engineer)
+
+- **Main Runbooks** (22 files): Core SOC operational procedures
+  - `generate_security_reports.md` - Unified reporting (alert, case, detection, UEBA)
+  - `ioc_investigation.md` - Progressive IOC analysis (basic → deep → GTI)
+  - `threat_hunting.md` - Comprehensive hunting (hypothesis, IOC, APT, campaign)
+  - `case_investigation.md` - Complete case analysis (prioritize → investigate → timeline)
+  - `triage_alerts.md` - Initial alert assessment and routing
+  - Plus specialized workflows for malware, endpoints, cloud, detection engineering
+
+- **Common Steps** (3 files): Intelligent workflow modules
+  - `ioc_analysis_workflows.md` - IOC enrichment, pivoting, correlation
+  - `case_management_workflows.md` - SOAR case lifecycle management  
+  - `operational_workflows.md` - Confirmation, reporting, task management
+
+- **Incident Response Plans** (4 files): Major incident playbooks
+  - `ransomware_response.md` - Ransomware incident response
+  - `malware_incident_response.md` - Malware outbreak response
+  - `phishing_response.md` - Phishing attack response
+  - `compromised_user_account_response.md` - Account compromise response
+
+- **Guidelines** (4 files): SOC best practices and standards
+  - `report_writing.md` - SOC report standardization
+  - `soc_analyst_workflows.md` - SOC analyst process guidance
+  - `runbook_guidelines.md` - Operational procedure standards
+  - `threat_intel_workflows.md` - Threat intelligence procedures
+
+**`reports/` (37+ files)** - Real SOC automation outputs
+- Generated security reports from actual runbook executions
+- Examples: Alert triage, hunt reports, IOC enrichment, case investigations
+- Demonstrates actual AI-generated SOC documentation
+
+#### 🔧 **Configuration & Integration Files**
+
+**Root Configuration**:
+- `configure-mcp.sh` - MCP server setup for SIEM/SOAR/GTI integration
+- `CLAUDE.md` - Claude Code AI configuration (core automation setup)
+- `LLMS.md` - Multi-LLM agent instructions
+- `CHANGELOG.md` - Complete optimization and change history
+
+**Hidden Directories**:
+- `.claude/` - Claude Code settings and local configuration
+- `.github/workflows/` - Automated quality assurance for SOC runbooks
+- `.env.example` - Template for MCP server environment variables
+
+#### 📚 **Supporting Documentation**
+
+- `SUPERCLAUDE_INTEGRATION_SUMMARY.md` - Advanced slash command framework
+- `SuperClaude_Framework/` - Git submodule for enhanced automation
+- `mcp-security/` - Placeholder for custom MCP server development
+
+#### 🏢 **Administrative Files**
+
+- Standard repository files: LICENSE, CODE_OF_CONDUCT.md, CONTRIBUTING
+- Git system files and version control metadata
+
+### SOC Automation Relevance
+
+**🔴 CRITICAL (High Relevance)**: ~100+ files
+- All of `rules_bank/` - Complete SOC operational framework  
+- All of `reports/` - Actual automation outputs
+- Configuration files - SIEM/SOAR/GTI integration setup
+
+**🟡 SUPPORTING (Medium Relevance)**: ~10 files  
+- GitHub workflows - Quality assurance automation
+- Multi-LLM support - Platform flexibility
+
+**⚪ ADMINISTRATIVE (Low Relevance)**: ~20 files
+- Legal, community, and repository management files
+
+**Total: 54 core SOC procedures + 37+ example reports + configuration = Complete AI-assisted SOC automation framework**
 
 ## Usage
 

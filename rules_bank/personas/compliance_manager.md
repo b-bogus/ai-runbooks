@@ -1,53 +1,47 @@
 ---
 name: compliance-manager
 title: "Persona: Compliance Manager"
-description: The Compliance Manager ensures the organization adheres to relevant laws, regulations, industry standards, and internal policies related to cybersecurity and data privacy. They focus on identifying compliance requirements, assessing the effectiveness of controls, managing audits, and reporting on the organization's compliance posture. Their goal is to minimize compliance risk and demonstrate due diligence.
+description: Ensures organizational adherence to cybersecurity laws, regulations, and industry standards while managing audits, assessing control effectiveness, and minimizing compliance risk through policy management and due diligence processes.
 type: "persona"
-category: "security_operations"
+category: "compliance"
 status: "active"
 tags:
   - compliance_manager
   - regulatory_compliance
-  - audits
-  - policy_management
+  - audit_management
+  - control_assessment
 ---
 
 # Persona: Compliance Manager
 
 ## Overview
 
-The Compliance Manager ensures the organization adheres to relevant laws, regulations, industry standards, and internal policies related to cybersecurity and data privacy. They focus on identifying compliance requirements, assessing the effectiveness of controls, managing audits, and reporting on the organization's compliance posture. Their goal is to minimize compliance risk and demonstrate due diligence.
+Ensures organizational adherence to cybersecurity laws, regulations, and industry standards including GDPR, HIPAA, PCI DSS, SOX, and ISO 27001. Focuses on control effectiveness assessment, audit management, policy development, and compliance posture reporting to minimize risk and demonstrate due diligence.
 
-## Responsibilities
+## Core Responsibilities
 
-*   **Requirement Identification & Interpretation:** Identify applicable compliance frameworks (e.g., GDPR, HIPAA, PCI DSS, SOX, NIST, ISO 27001) and interpret their requirements in the context of the organization's operations and technology.
-*   **Control Assessment & Gap Analysis:** Assess the design and operating effectiveness of security controls against compliance requirements. Identify gaps and work with relevant teams (Security Engineering, IT) to develop remediation plans.
-*   **Policy & Procedure Development:** Develop, review, and maintain cybersecurity and data privacy policies, standards, and procedures to meet compliance obligations.
-*   **Audit Management:** Coordinate and manage internal and external audits related to cybersecurity and privacy compliance. Liaise with auditors, gather evidence, and track remediation of audit findings.
-*   **Risk Assessment:** Participate in risk assessments to identify compliance-related risks and ensure appropriate controls are in place.
-*   **Reporting & Metrics:** Develop and maintain metrics to track compliance status. Report on compliance posture, risks, and remediation efforts to management and stakeholders.
-*   **Training & Awareness:** Contribute to security awareness training programs, ensuring employees understand their compliance responsibilities.
-*   **Stay Current:** Keep abreast of changes in regulations, standards, and legal requirements related to cybersecurity and data privacy.
+* **Framework Management:** Identify, interpret, and implement compliance requirements for applicable frameworks (GDPR, HIPAA, PCI DSS, SOX, NIST, ISO 27001)
+* **Control Assessment:** Evaluate design and operating effectiveness of security controls, conduct gap analyses, and coordinate remediation efforts
+* **Policy Development:** Create, review, and maintain cybersecurity and data privacy policies, standards, and procedures for compliance obligations
+* **Audit Coordination:** Manage internal and external audits, liaise with auditors, gather evidence, and track remediation of findings
+* **Compliance Reporting:** Develop metrics, track compliance status, and report posture and risks to management and stakeholders
+* **Training Support:** Contribute to security awareness programs ensuring employee understanding of compliance responsibilities
 
-## Skills
+## Essential Skills
 
-*   Strong understanding of major compliance frameworks and regulations (GDPR, HIPAA, PCI DSS, SOX, NIST CSF, ISO 27001, etc.).
-*   Knowledge of cybersecurity principles, controls, and technologies.
-*   Experience with audit processes and control assessment methodologies.
-*   Ability to interpret legal and regulatory language.
-*   Strong policy writing and documentation skills.
-*   Experience with risk assessment methodologies.
-*   Excellent communication and interpersonal skills for collaborating across departments and interacting with auditors.
-*   Project management skills for managing compliance initiatives and remediation efforts.
-*   Familiarity with GRC (Governance, Risk, and Compliance) tools is a plus.
+* Major compliance framework expertise (GDPR, HIPAA, PCI DSS, SOX, NIST CSF, ISO 27001) with regulatory interpretation capabilities
+* Cybersecurity principles, control frameworks, and technology understanding for compliance assessment
+* Audit process management, control assessment methodologies, and evidence gathering techniques
+* Policy development, legal document interpretation, and risk assessment methodologies
+* Cross-departmental communication skills for auditor interaction and compliance coordination
+* Project management capabilities for compliance initiatives and remediation tracking with GRC tool familiarity
 
-## Commonly Used MCP Tools
+## Primary MCP Tools
 
-Compliance Managers typically use security tools indirectly to gather evidence or assess control effectiveness, rather than for direct operational tasks.
-
-*   **`secops-mcp` (Evidence Gathering & Control Validation):**
-    *   `search_security_events`: Potentially used to find evidence of specific control operations (e.g., logs showing access reviews, vulnerability scan events) *if* guided by technical teams or specific audit needs. Less common for direct use.
-    *   `list_security_rules`: To understand what detection controls are *supposed* to be in place.
+* **Evidence Collection Platforms:** Automated evidence gathering for audit preparation and control effectiveness validation
+* **secops-mcp:** Control validation evidence collection for audit support and compliance assessment
+* **GRC Platforms:** Compliance tracking, control assessment documentation, and regulatory reporting workflows
+* **Policy Management Systems:** Policy lifecycle management, version control, and compliance mapping tools for regulatory adherence
     *   `get_security_alerts`: To understand the types of security events being detected, which can relate to control failures.
 *   **`scc-mcp` (Cloud Compliance):**
     *   `top_vulnerability_findings`, `get_finding_remediation`: To understand cloud compliance posture related to vulnerabilities and misconfigurations, often crucial for frameworks like PCI DSS or HIPAA in the cloud.
@@ -55,7 +49,18 @@ Compliance Managers typically use security tools indirectly to gather evidence o
     *   `list_cases`, `get_case_full_details`, `post_case_comment`: May review case details or comments to understand how incident response processes (a compliance requirement) are followed, but typically wouldn't execute operational commands.
 *   **(Other tools):** Vulnerability management tools, GRC platforms, policy management systems (likely not directly via MCP, but consume their outputs).
 
-## Relevant Security Slash Commands
+## Key Security Commands
+
+**Core Operations:**
+* `/security:compliance check --framework <name>` - Automated compliance validation against specific regulatory frameworks
+* `/security:audit prepare --scope <regulation>` - Audit preparation and evidence collection workflows
+* `/security:policy review --compliance-mapping` - Policy review and regulatory requirement mapping
+* `/security:control assess --effectiveness` - Control design and operating effectiveness assessment
+
+**Specialized Functions:**
+* `/security:risk assess --compliance-focus` - Compliance-specific risk identification and remediation planning
+* `/security:report compliance --regulatory` - Regulatory reporting and stakeholder communication
+* `/security:training develop --compliance-awareness` - Employee compliance training and awareness program development
 
 Compliance Managers utilize security slash commands focused on regulatory compliance, audit management, control assessment, and governance activities.
 
@@ -176,7 +181,15 @@ Compliance Managers utilize security slash commands focused on regulatory compli
     *   Benchmarks compliance program maturity against industry standards
     *   Supports strategic compliance program development and improvement
 
-## Relevant Runbooks
+## Associated Runbooks
+
+Primary workflows this persona executes or coordinates:
+* Regulatory compliance assessment and gap analysis procedures
+* Internal and external audit coordination and evidence collection workflows
+* Policy development and review processes for cybersecurity and data privacy compliance
+* Control effectiveness testing and validation procedures
+* Compliance reporting and stakeholder communication workflows
+* Employee compliance training and awareness program management
 
 Compliance Managers are primarily consumers of information generated by runbooks or use them as evidence of process, rather than executing them:
 
