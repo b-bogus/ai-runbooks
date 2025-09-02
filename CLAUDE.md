@@ -9,27 +9,36 @@ This is a security operations (SOC) runbook and persona system designed to guide
 ## Repository Structure
 
 - `rules_bank/` - Master directory containing all documentation, personas, and runbooks
-  - `personas/` - Security role definitions (SOC Analysts, Threat Hunters, Incident Responders, etc.)
+  - `personas/` - Standardized security role definitions with consistent structure and templates
   - `run_books/` - Step-by-step procedural guides for security tasks
-    - `common_steps/` - Reusable procedure components
+    - `common_steps/` - Consolidated reusable workflow components
     - `irps/` - Incident Response Plans for major incidents
     - `guidelines/` - Best practices and documentation guides
 - `reports/` - Generated security reports and examples
+- `CHANGELOG.md` - Comprehensive repository optimization and change history
 
-## Configuration Scripts
+## Persona System
 
-### Setting Active Persona
-```bash
-python set_persona_rules.py <persona_name>
-# Example: python set_persona_rules.py tier1_soc_analyst
-```
-Currently supported personas: `tier1_soc_analyst`, `threat_hunter`
+### Standardized Persona Architecture
+All personas follow a consistent template structure defined in `rules_bank/personas/_persona_template.md`:
+- **Core Responsibilities**: Key duties and operational focus
+- **Essential Skills**: Required capabilities and expertise
+- **Primary MCP Tools**: Platform integrations and tool access
+- **Key Security Commands**: Streamlined command reference
+- **Associated Runbooks**: Relevant workflow procedures
 
-### Linking Common Steps
-```bash
-python symlink_common_steps.py
-```
-Run this after changing personas to ensure common steps remain accessible.
+### Available Personas
+- `soc_analyst_unified.md` - Multi-tier SOC analyst with progressive responsibility matrix
+- `incident_responder.md` - PICERL-based incident response coordination
+- `threat_hunter.md` - Hypothesis-driven proactive threat hunting
+- `cti_researcher.md` - Threat intelligence research and dissemination
+- `detection_engineer.md` - Detection rule lifecycle management
+- `security_engineer.md` - Infrastructure and automation focus
+- `soc_manager.md` - Team leadership and operational oversight
+- `ciso.md` - Executive governance and strategic risk management
+- `compliance_manager.md` - Regulatory compliance and audit management
+- `information_architect.md` - Content organization and knowledge management
+- `red_team.md` - Adversary simulation and defensive validation
 
 ## Key Concepts & Capabilities
 
@@ -41,16 +50,19 @@ Run this after changing personas to ensure common steps remain accessible.
 
 ### Advanced Features
 - **Slash Commands**: Specialized commands for security workflows (primarily supported in Claude)
-- **Dynamic Configuration**: Persona-based context switching and tool access management
+- **Consistent Persona Structure**: Template-driven standardization for improved usability
 - **Report Generation**: Automated security report creation with standardized templates
 - **Threat Intelligence**: Active integration with Google Threat Intelligence and security feeds
 - **Multi-Platform SIEM**: Chronicle, SOAR case management, and cloud security integration
+- **Workflow Consolidation**: Intelligent consolidation of common procedures for efficiency
 
 ## Working with the Codebase
 
-1. All content lives in `rules_bank/` - this is the primary working directory
-2. The project uses MCP (Model Context Protocol) tools for integration with Google Cloud security services
-3. Runbook actions map to specific agent tools (see `rules_bank/agent_tool_mapping.md`)
+1. **Primary Content**: All documentation lives in `rules_bank/` directory structure
+2. **MCP Integration**: Model Context Protocol tools for Google Cloud security services
+3. **Tool Mapping**: Runbook actions map to specific agent tools (see `rules_bank/agent_tool_mapping.md`)
+4. **Change History**: Comprehensive optimization history documented in `CHANGELOG.md`
+5. **Template System**: Use `rules_bank/personas/_persona_template.md` for consistent persona development
 
 ## Essential Context Sources for LLMs
 
@@ -135,7 +147,9 @@ Content organization and analysis capabilities:
 
 ### Repository Guidelines
 - This is primarily a documentation repository - no build, test, or lint commands exist
-- All content is stored directly in `rules_bank/` for simple, direct access
+- **Simplified Architecture**: Removed symlink complexity for direct content access
+- **Standardized Structure**: All personas follow consistent template format
+- **Optimized for Efficiency**: Consolidated workflows reduce redundancy while preserving functionality
 - Designed for AI-assisted security operations and incident response workflows
 
 ### Security Operations Focus
@@ -146,6 +160,8 @@ Content organization and analysis capabilities:
 
 ### Context Optimization
 - **Read LLMS-THESAURUS.md files first** for domain vocabulary understanding
-- Check persona files for role-specific context and available tools
+- **Check CHANGELOG.md** for complete repository optimization history and current architecture
+- **Use persona template structure** for consistent role-specific context and capabilities
 - Reference agent_tool_mapping.md for MCP tool capabilities
 - Use reporting templates for consistent output formatting
+- **Template-driven development**: Follow `_persona_template.md` for new persona creation

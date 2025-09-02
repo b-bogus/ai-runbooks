@@ -101,6 +101,36 @@
 - Associated runbook references updated for current repository structure
 - Metadata consistency validated across all persona files
 
+### 🔧 Documentation Architecture Update
+
+**File Updated**: `CLAUDE.md` - LLM agent instructions and repository guidance
+**Update Rationale**: Remove obsolete configuration references and reflect current optimized architecture
+
+#### Key Updates Applied
+
+**Obsolete Content Removed**:
+- Removed references to non-existent Python scripts (`set_persona_rules.py`, `symlink_common_steps.py`)
+- Eliminated outdated symlink architecture documentation (removed `.claude/`, `.clinerules/`, `.gemini/` references)
+- Updated configuration section to reflect template-driven persona system
+
+**Current Architecture Documented**:
+- **Persona System**: Updated to reflect standardized template architecture with all 11 available personas listed
+- **Repository Structure**: Added CHANGELOG.md reference for complete optimization history
+- **Working Guidelines**: Emphasized simplified architecture and template-driven development
+- **Context Optimization**: Added template system guidance and changelog reference for historical context
+
+**Content Improvements**:
+- **39 insertions, 23 deletions**: Net addition of current, accurate guidance
+- **Template Integration**: Added `_persona_template.md` usage instructions
+- **Historical Context**: Referenced CHANGELOG.md for complete repository evolution understanding
+- **Simplified Workflow**: Removed complex configuration steps, emphasized direct content access
+
+#### Impact
+- **Accuracy**: CLAUDE.md now reflects actual repository state post-optimization
+- **Usability**: New AI assistants will receive correct guidance about current architecture
+- **Maintenance**: Eliminated references to removed/non-existent files and processes
+- **Completeness**: All 11 standardized personas properly documented with current structure
+
 ## 2025-09-01 - Repository Structure Consolidation
 
 ### 🎯 Advanced Sonnet 4 Optimization (Follow-up Analysis)
